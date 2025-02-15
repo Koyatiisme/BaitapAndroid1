@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Phương Trình Bậc 2</title>
+
+</head>
+<body>
+<h1>Tính Nghiệm Phương Trình Bậc 2</h1>
+<p>Nhập vào các hệ số a, b, c của phương trình bậc 2: ax² + bx + c = 0</p>
+
+<label for="a">a:</label>
+<input type="number" id="a" placeholder="Nhập giá trị a" required><br>
+
+<label for="b">b:</label>
+<input type="number" id="b" placeholder="Nhập giá trị b" required><br>
+
+<label for="c">c:</label>
+<input type="number" id="c" placeholder="Nhập giá trị c" required><br>
+
+<button onclick="tinhtoan()">Tính Nghiệm</button>
+
+<div class="result" id="result"></div>
+
+<div class="info">
+    <label><strong>Họ và Tên:</strong> Nguyễn Hữu Thắng</label><br>
+    <label><strong>MSSV:</strong> K215480106070</label><br>
+    <label><strong>Lớp:</strong> K57KMT</label><br>
+    <label><strong>Email:</strong> K215480106070@tnut.edu.vn</label><br>
+    <label><strong>Địa chỉ:</strong> Thái Nguyên</label>
+</div>
+<img src="NguyenHuuThang.jpg" width="320" height="520"/>
+
+<audio controls>
+    <source src="mp3/amthanh.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<video width="320" height="240" controls>
+    <source src="mp4/video1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<iframe width="100%" height="315"
+        src="https://www.youtube.com/watch?v=MKJ2mlHhuNk"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+</iframe>
+<script>
+    function NhanKQ(s){
+            document.getElementById('result').innerHTML = s;
+        }
+        function tinhtoan(){
+            var a = document.getElementById('a').value;
+            var b = document.getElementById('b').value;
+            var c = document.getElementById('c').value;
+            window.Android.xuly(a, b, c);
+        }
+</script>
+</body>
+</html>

@@ -1,7 +1,9 @@
 package com.example.baitap1;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -34,6 +36,22 @@ public class MainActivity extends AppCompatActivity {
         btnWeb = findViewById(R.id.bnWeb);
         ketqua = findViewById(R.id.ketqua);
 
-
+        btnTinh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PhuongTrinh phuongTrinh = new PhuongTrinh();
+                phuongTrinh.setA(Integer.parseInt(edtA.getText().toString()));
+                phuongTrinh.setB(Integer.parseInt(edtB.getText().toString()));
+                phuongTrinh.setC(Integer.parseInt(edtC.getText().toString()));
+                ketqua.setText(phuongTrinh.tinhToan().toString());
+            }
+        });
+        btnWeb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WebActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
